@@ -32,6 +32,13 @@ public:
 	uint32_t video[VIDEO_WIDTH * VIDEO_HEIGHT]{};
 	uint16_t opcode;
 
+
+
+
+	std::default_random_engine randGen;
+	std::uniform_int_distribution<uint8_t> randByte;
+
+
 };
 
 
