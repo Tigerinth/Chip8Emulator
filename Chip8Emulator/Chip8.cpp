@@ -4,6 +4,8 @@
 #include "Chip8.h"
 
 #include <fstream>
+#include <random>
+#include <cstdint>
 
 const unsigned int START_ADDRESS = 0x200;
 const unsigned int FONTSET_SIZE = 80;
@@ -70,5 +72,20 @@ Chip8::Chip8()
 	{
 		memory[FONTSET_START_ADDRESS + i] = fontset[i];
 	}
+
+}
+Chip8::OPCODE_NULL() {
+
+}
+Chip8::OPCODE_CLS() {
+
+}
+Chip8::OPCODE_RET() {
+
+}
+Chip8::OPCODE_JUMPADDRESS() {
+
+}
+Chip8::OPCODE_CALLADDRESS() {
 
 }
