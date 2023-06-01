@@ -78,13 +78,16 @@ Chip8::OPCODE_NULL() {
 
 }
 Chip8::OPCODE_CLS() {
-
+	uint16_t videosize = sizeof(video);
+	memset(video, 0, videosize);
 }
 Chip8::OPCODE_RET() {
-
+	pc = stack[sp];
+	sp--;
 }
 Chip8::OPCODE_JUMPADDRESS() {
-
+	uint16_t atlanacakadres = opcode & 0x0FFFu;
+	pc = atlanacakadres;
 }
 Chip8::OPCODE_CALLADDRESS() {
 
